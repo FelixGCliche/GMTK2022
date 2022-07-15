@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1482802782482136619}
   - component: {fileID: 1482802782482136620}
   m_Layer: 0
-  m_Name: DragAndDropManager
+  m_Name: DragAndDropController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +162,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusPoint: {fileID: 0}
+  focusPointZOffset: 0

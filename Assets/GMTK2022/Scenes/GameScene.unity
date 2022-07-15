@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2149625693736390174, guid: 8dc22c232a7612748b6cbdd65b4a0262, type: 3}
       propertyPath: m_Name
-      value: Dice
+      value: First Dice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dc22c232a7612748b6cbdd65b4a0262, type: 3}
@@ -542,6 +542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1482802782482136621, guid: c3074cb58edf529439f24465087e54ca, type: 3}
+      propertyPath: m_Name
+      value: DragAndDropController
+      objectReference: {fileID: 0}
     - target: {fileID: 1482802782990278563, guid: c3074cb58edf529439f24465087e54ca, type: 3}
       propertyPath: m_RootOrder
       value: 0
