@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuPage: {fileID: 6985320710715372715}
-  optionMenuPage: {fileID: 7892303106787810046}
+  settingsMenuPage: {fileID: 7892303106787810046}
 --- !u!114 &1052007936117575477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8096566196615051889, guid: aa14549f12eae654fb5468d5472989d4, type: 3}
       propertyPath: m_Name
-      value: OptionMenu
+      value: SettingsMenuPage
       objectReference: {fileID: 0}
     - target: {fileID: 8096566196615051889, guid: aa14549f12eae654fb5468d5472989d4, type: 3}
       propertyPath: m_IsActive
@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1235812926645705265}
+    - target: {fileID: 3584405358174341375, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowSettingsMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 5791016332876037254, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

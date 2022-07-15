@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d9e9eb4a23eaf43aacfacafaee43ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuPage: {fileID: 3318548099679294999}
-  OptionsMenuPage: {fileID: 1988105552833704526}
-  CreditsMenuPage: {fileID: 1691321714568058443}
+  mainMenuPage: {fileID: 3318548099679294999}
+  settingsMenuPage: {fileID: 1988105552833704526}
+  creditsMenuPage: {fileID: 1691321714568058443}
 --- !u!114 &4738101143614091282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4694568650943896808, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToOptionsMenu
+      value: GoToSettingsMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4694568650943896808, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8096566196615051889, guid: aa14549f12eae654fb5468d5472989d4, type: 3}
       propertyPath: m_Name
-      value: OptionMenuPage
+      value: SettingsMenuPage
       objectReference: {fileID: 0}
     - target: {fileID: 8096566196615051889, guid: aa14549f12eae654fb5468d5472989d4, type: 3}
       propertyPath: m_IsActive

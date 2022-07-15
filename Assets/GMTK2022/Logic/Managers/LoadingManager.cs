@@ -10,7 +10,7 @@ public class LoadingManager : SingletonPersistant<LoadingManager>
     public delegate void FadeOutLoadingScreenDelegate(float nbSec);
     public event FadeInLoadingScreenDelegate FadeOutLoadingScreen;
 
-    private float nbSecForFade = 2f;
+    private float nbSecForFade = 1f;
 
     private Scene currentScene;
 

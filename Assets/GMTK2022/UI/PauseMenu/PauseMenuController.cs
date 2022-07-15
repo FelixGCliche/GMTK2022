@@ -5,18 +5,18 @@ using UnityEngine;
 public class PauseMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenuPage;
-    [SerializeField] private GameObject optionMenuPage;
+    [SerializeField] private GameObject settingsMenuPage;
 
     public void ShowPauseMenu()
     {
         pauseMenuPage.SetActive(true);
-        optionMenuPage.SetActive(false);
+        settingsMenuPage.SetActive(false);
     }
 
     public void ClosePauseMenu()
     {
         pauseMenuPage.SetActive(false);
-        optionMenuPage.SetActive(false);
+        settingsMenuPage.SetActive(false);
     }
 
     public void TogglePauseMenu()
@@ -31,10 +31,10 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
-    public void ShowOptionMenu()
+    public void ShowSettingsMenu()
     {
         pauseMenuPage.SetActive(false);
-        optionMenuPage.SetActive(true);
+        settingsMenuPage.SetActive(true);
     }
 
     public void ReturnToMainMenu()
