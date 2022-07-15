@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject MainMenu;
-    [SerializeField] private GameObject OptionsMenu;
-    [SerializeField] private GameObject CreditsMenu;
+    [SerializeField] private GameObject MainMenuPage;
+    [SerializeField] private GameObject OptionsMenuPage;
+    [SerializeField] private GameObject CreditsMenuPage;
 
     public void StartGame()
     {
@@ -15,24 +15,24 @@ public class MainMenuController : MonoBehaviour
 
     public void GoBackToMainMenu()
     {
-        OptionsMenu.SetActive(false);
-        CreditsMenu.SetActive(false);
+        OptionsMenuPage.SetActive(false);
+        CreditsMenuPage.SetActive(false);
 
-        MainMenu.SetActive(true);
+        MainMenuPage.SetActive(true);
     }
 
     public void GoToOptionsMenu()
     {
-        MainMenu.SetActive(false);
+        MainMenuPage.SetActive(false);
 
-        OptionsMenu.SetActive(true);
+        OptionsMenuPage.SetActive(true);
     }
 
     public void GoToCreditsMenu()
     {
-        MainMenu.SetActive(false);
+        MainMenuPage.SetActive(false);
 
-        CreditsMenu.SetActive(true);
+        CreditsMenuPage.SetActive(true);
     }
 
     public void QuitGame()

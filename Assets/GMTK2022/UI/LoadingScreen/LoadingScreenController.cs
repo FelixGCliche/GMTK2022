@@ -11,6 +11,7 @@ public class LoadingScreenController : MonoBehaviour
     [SerializeField] private GameObject LoadingScreen;
 
     private Color faderColor;
+    private Color hiddenFaderColor;
 
     private void OnEnable()
     {
@@ -27,29 +28,36 @@ public class LoadingScreenController : MonoBehaviour
     private void Start()
     {
         faderColor = fader.color;
-        fader.color = new Color(0,0,0,0);
+        hiddenFaderColor = faderColor;
+        hiddenFaderColor.a = 0;
+        fader.color = hiddenFaderColor;
         LoadingScreen.SetActive(false);
     }
 
     public void FadeInLoadingScreen(float nbSecForFade)
     {
-        fader.DOColor(faderColor, nbSecForFade).OnComplete(OnFadeInLoadingComplete);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(fader.DOColor(faderColor, nbSecForFade/2).OnComplete(ShowLoadingScreen));
+        sequence.Append(fader.DOColor(hiddenFaderColor, nbSecForFade/2));
+        sequence.Play();
     }
 
-    private void OnFadeInLoadingComplete()
+    private void ShowLoadingScreen()
     {
         LoadingScreen.SetActive(true);
     }
 
     public void FadeOutLoadingScreen(float nbSecForFade)
     {
-        LoadingScreen.SetActive(false);
-        fader.DOColor(new Color(0,0,0,0), nbSecForFade).OnComplete(OnFadeOutLoadingComplete);  
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(fader.DOColor(faderColor, nbSecForFade/2).OnComplete(HideLoadingScreen));
+        sequence.Append(fader.DOColor(hiddenFaderColor, nbSecForFade/2));
+        sequence.Play(); 
     }
 
-    private void OnFadeOutLoadingComplete()
+    private void HideLoadingScreen()
     {
-        
+        LoadingScreen.SetActive(false);
     }
 
 
