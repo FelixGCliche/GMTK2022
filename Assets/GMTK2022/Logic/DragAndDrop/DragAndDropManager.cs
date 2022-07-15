@@ -37,7 +37,7 @@ public class DragAndDropManager : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Draggable")))
         {
-            if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || hit.collider.gameObject.GetComponent<IDrag>() != null))
+            if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || (hit.collider.gameObject.GetComponent<IDrag>() != null && hit.collider.gameObject.GetComponent<IDrag>().CanBeDragged())))
             {
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
             }
