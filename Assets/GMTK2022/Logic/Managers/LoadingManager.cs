@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class LoadingManager : SingletonPersistant<LoadingManager>
 {
+    public delegate void FadeInLoadingScreenDelegate(float nbSec);
+    public event FadeInLoadingScreenDelegate FadeInLoadingScreen;
+    public delegate void FadeOutLoadingScreenDelegate(float nbSec);
+    public event FadeInLoadingScreenDelegate FadeOutLoadingScreen;
+
+    private float nbSecForFade = 1f;
+
     private Scene currentScene;
 
     public void ChangeScene(string sceneToLoad)
@@ -15,17 +22,20 @@ public class LoadingManager : SingletonPersistant<LoadingManager>
     private IEnumerator LoadSceneAsync(string newSceneToLoad)
     {
         Scene oldScene = SceneManager.GetActiveScene();
-        //Load loading screen
-        AsyncOperation asyncTask = SceneManager.LoadSceneAsync("LoadingScreen", LoadSceneMode.Additive);
 
-        while (!asyncTask.isDone)
+        //Load LoadingScreen if not yet loaded
+        if(!SceneManager.GetSceneByName("LoadingScreen").IsValid())
         {
+            SceneManager.LoadScene("LoadingScreen", LoadSceneMode.Additive);
             yield return null;
         }
 
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("LoadingScreen"));
+        //FadeIn loading screen
+        FadeInLoadingScreen(nbSecForFade);
+        yield return new WaitForSeconds(nbSecForFade);
+
         //Unload old scene
-        asyncTask = SceneManager.UnloadSceneAsync(oldScene);
+        AsyncOperation asyncTask = SceneManager.UnloadSceneAsync(oldScene);
 
         while (!asyncTask.isDone)
         {
@@ -40,13 +50,9 @@ public class LoadingManager : SingletonPersistant<LoadingManager>
             yield return null;
         }
 
-        //Unload loadingScreen
-        asyncTask = SceneManager.UnloadSceneAsync("LoadingScreen");
-
-        while (!asyncTask.isDone)
-        {
-            yield return null;
-        }
+        //FadeOut loadingScreen
+        FadeOutLoadingScreen(nbSecForFade);
+        yield return new WaitForSeconds(nbSecForFade);
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(newSceneToLoad));
         yield break;
