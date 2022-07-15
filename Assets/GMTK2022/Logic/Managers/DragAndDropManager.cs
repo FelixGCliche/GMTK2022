@@ -35,7 +35,7 @@ public class DragAndDropManager : MonoBehaviour
     {
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit))
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Draggable")))
         {
             if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || hit.collider.gameObject.GetComponent<IDrag>() != null))
             {
@@ -49,21 +49,25 @@ public class DragAndDropManager : MonoBehaviour
         clickedObject.TryGetComponent<Rigidbody>(out var rigidbody);
         clickedObject.TryGetComponent<IDrag>(out var iDragComponent);
         iDragComponent?.OnStartDrag();
-        float initialDistance = Vector3.Distance(clickedObject.transform.position, mainCamera.transform.position);
         while(mouseClick.ReadValue<float>() != 0)
         {
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("DroppingZone"));
+
             if(rigidbody != null)
             {
-                Vector3 direction = ray.GetPoint(initialDistance) - clickedObject.transform.position;
+                Vector3 direction = hit.point - clickedObject.transform.position;
                 rigidbody.velocity = direction * mouseDragPhysicsSpeed;
                 yield return waitForFixedUpdate;
             }
+            
             else
             {
-                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, ray.GetPoint(initialDistance), ref velocity, mouseDragSpeed);
+                clickedObject.transform.position = Vector3.SmoothDamp(clickedObject.transform.position, hit.point, ref velocity, mouseDragSpeed);
                 yield return null;
             }
+            
         }
         iDragComponent?.OnEndDrag();
     }
