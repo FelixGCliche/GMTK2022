@@ -4,6 +4,7 @@ public class Dice : MonoBehaviour, IDrag
 {
     private Rigidbody diceRigidBody;
     private bool hasBeenDropped = false;
+    private bool waitingToStabilize = false;
     private bool isActiveDice = true;
 
     private void Awake()
@@ -28,11 +29,19 @@ public class Dice : MonoBehaviour, IDrag
         return !hasBeenDropped;
     }
 
-    private void Update()
+    private void OnCollisionEnter(Collision collision)
     {
         if(hasBeenDropped)
         {
-            if(diceRigidBody.velocity.magnitude == 0 && isActiveDice )
+            waitingToStabilize = true;
+        }
+    }
+
+    private void Update()
+    {
+        if(waitingToStabilize)
+        {
+            if(diceRigidBody.velocity.magnitude <= 0.1 && isActiveDice )
             {
                 TurnManager.Instance.StartNextTurn();
                 isActiveDice = false;
