@@ -56,6 +56,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         diceRigidBody.useGravity = false;
         diceState = DiceState.PICKED;
+        diceRigidBody.constraints = RigidbodyConstraints.FreezeRotation;
         SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position);
     }
 
@@ -63,6 +64,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         diceRigidBody.useGravity = true;
         diceState = DiceState.FALLING;
+        diceRigidBody.constraints = RigidbodyConstraints.None;
         hasBeenDropped = true;
         //diceRigidBody.velocity = Vector3.zero;
     }
