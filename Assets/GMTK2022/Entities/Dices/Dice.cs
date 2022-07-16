@@ -18,7 +18,7 @@ public class Dice : MonoBehaviour, IDrag
     public void OnStartDrag()
     {
         diceRigidBody.useGravity = false;
-        SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)]);
+        SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position);
     }
 
     public void OnEndDrag()
@@ -37,7 +37,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         if(hasBeenDropped)
         {
-            SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)]);
+            SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position);
             waitingToStabilize = true;
         }
     }
