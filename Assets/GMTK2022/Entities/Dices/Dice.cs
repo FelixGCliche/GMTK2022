@@ -13,6 +13,10 @@ public class Dice : MonoBehaviour, IDrag
     [SerializeField] public AudioClip[] rollSFXs;
 
     private Rigidbody diceRigidBody;
+    private LineRenderer dropDownLaserLineRenderer;
+
+    private IEnumerator dropDownLaserCoroutine;
+
     private int rollValue = 1;
     private DiceState diceState = DiceState.SPINNING;
 
@@ -21,6 +25,7 @@ public class Dice : MonoBehaviour, IDrag
     private void Awake()
     {
         diceRigidBody = GetComponent<Rigidbody>();
+        dropDownLaserLineRenderer = GetComponentInChildren<LineRenderer>();
         quickOutline = GetComponent<QuickOutline>();
     }
 
@@ -60,6 +65,9 @@ public class Dice : MonoBehaviour, IDrag
 
     public void OnStartDrag()
     {
+        dropDownLaserCoroutine = DropDownLaser();
+        StartCoroutine(dropDownLaserCoroutine);
+
         diceRigidBody.useGravity = false;
         diceState = DiceState.PICKED;
         diceRigidBody.constraints = RigidbodyConstraints.FreezeRotation;
@@ -68,6 +76,9 @@ public class Dice : MonoBehaviour, IDrag
 
     public void OnEndDrag()
     {
+        StopCoroutine(dropDownLaserCoroutine);
+        HideDropDownLaser();
+
         diceRigidBody.useGravity = true;
         quickOutline.enabled = false;
         diceState = DiceState.FALLING;
@@ -99,6 +110,25 @@ public class Dice : MonoBehaviour, IDrag
                 diceState = DiceState.FALLEN;
             }
         }
+    }
+
+    private IEnumerator DropDownLaser()
+    {
+        while(true)
+        {
+            dropDownLaserLineRenderer.SetPosition(0, transform.position);
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Default") | LayerMask.GetMask("Draggable")))
+                dropDownLaserLineRenderer.SetPosition(1, hit.point);
+            else
+                dropDownLaserLineRenderer.SetPosition(1, transform.position);  
+            yield return null;
+        }
+    }
+
+    private void HideDropDownLaser()
+    {
+        Destroy(dropDownLaserLineRenderer.gameObject);
     }
 
 }
