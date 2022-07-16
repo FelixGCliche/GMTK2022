@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour, IDrag
 {
+    [SerializeField] public AudioClip[] grabSFXs;
+    [SerializeField] public AudioClip[] dropSFXs;
+
     private Rigidbody diceRigidBody;
     private bool hasBeenDropped = false;
     private bool waitingToStabilize = false;
@@ -15,6 +18,7 @@ public class Dice : MonoBehaviour, IDrag
     public void OnStartDrag()
     {
         diceRigidBody.useGravity = false;
+        SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position);
     }
 
     public void OnEndDrag()
@@ -33,6 +37,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         if(hasBeenDropped)
         {
+            SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position);
             waitingToStabilize = true;
         }
     }
@@ -48,7 +53,5 @@ public class Dice : MonoBehaviour, IDrag
             }
         }
     }
-
-
 
 }
