@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2149625693736390172}
   - component: {fileID: 2149625693736390168}
   - component: {fileID: 2149625693736390167}
+  - component: {fileID: 4470682380634075274}
   m_Layer: 3
   m_Name: Dice
   m_TagString: Dice
@@ -142,3 +143,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 718a37c484a82964e870f21c851f2fec, type: 3}
   rollSFXs:
   - {fileID: 8300000, guid: 6bf2176b192423548942df7af825541d, type: 3}
+--- !u!114 &4470682380634075274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149625693736390174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6258ebaba4055449a87653d022f4bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0.69076276, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
