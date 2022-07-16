@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 7229109461476349640}
+  spawnerPlateform: {fileID: 1108567365253684695}
   diceToSpawn: {fileID: 2149625693736390167, guid: 8dc22c232a7612748b6cbdd65b4a0262, type: 3}
 --- !u!1 &7229109461476349640
 GameObject:
