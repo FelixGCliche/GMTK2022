@@ -755,6 +755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 869539526971218769, guid: 4cd69c16f1b574645944cb1b39e3071c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.509
+      objectReference: {fileID: 0}
     - target: {fileID: 869539527037236581, guid: 4cd69c16f1b574645944cb1b39e3071c, type: 3}
       propertyPath: m_Name
       value: LivingRoom
@@ -803,6 +807,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 869539527466643237, guid: 4cd69c16f1b574645944cb1b39e3071c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.06
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd69c16f1b574645944cb1b39e3071c, type: 3}
 --- !u!1001 &1482802783194092719
@@ -824,10 +832,6 @@ PrefabInstance:
       propertyPath: focusPoint
       value: 
       objectReference: {fileID: 1842364664}
-    - target: {fileID: 1026303876855615982, guid: c3074cb58edf529439f24465087e54ca, type: 3}
-      propertyPath: focusPointZOffset
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1482802782482136620, guid: c3074cb58edf529439f24465087e54ca, type: 3}
       propertyPath: soundManager
       value: 
@@ -895,10 +899,6 @@ PrefabInstance:
     - target: {fileID: 5855436611114073743, guid: c3074cb58edf529439f24465087e54ca, type: 3}
       propertyPath: focusPointZOffset
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255115438662139608, guid: c3074cb58edf529439f24465087e54ca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1482802782990278562, guid: c3074cb58edf529439f24465087e54ca, type: 3}

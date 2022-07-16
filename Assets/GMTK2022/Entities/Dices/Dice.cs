@@ -12,8 +12,12 @@ public class Dice : MonoBehaviour, IDrag
     [SerializeField] public AudioClip[] dropSFXs;
     [SerializeField] public AudioClip[] rollSFXs;
 
+    [Header("Drop down laser")]
+    [SerializeField] private GameObject dropDownImpact;
+
     private Rigidbody diceRigidBody;
     private LineRenderer dropDownLaserLineRenderer;
+    private GameObject dropDownImpactInstance;
 
     private IEnumerator dropDownLaserCoroutine;
 
@@ -26,6 +30,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         diceRigidBody = GetComponent<Rigidbody>();
         dropDownLaserLineRenderer = GetComponentInChildren<LineRenderer>();
+        dropDownImpactInstance = Instantiate(dropDownImpact);
         quickOutline = GetComponent<QuickOutline>();
     }
 
@@ -117,11 +122,18 @@ public class Dice : MonoBehaviour, IDrag
         while(true)
         {
             dropDownLaserLineRenderer.SetPosition(0, transform.position);
+
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, LayerMask.GetMask("Default") | LayerMask.GetMask("Draggable")))
+            {
                 dropDownLaserLineRenderer.SetPosition(1, hit.point);
+                dropDownImpactInstance.transform.position = hit.point;
+            }
             else
+            {
                 dropDownLaserLineRenderer.SetPosition(1, transform.position);  
+                dropDownImpactInstance.transform.position = transform.position;
+            }
             yield return null;
         }
     }
@@ -129,6 +141,7 @@ public class Dice : MonoBehaviour, IDrag
     private void HideDropDownLaser()
     {
         Destroy(dropDownLaserLineRenderer.gameObject);
+        Destroy(dropDownImpactInstance.gameObject);
     }
 
 }

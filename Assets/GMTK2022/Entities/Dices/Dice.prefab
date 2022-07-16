@@ -35,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6171256097818927411}
-  - {fileID: 1939860343849458443}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,6 +144,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 718a37c484a82964e870f21c851f2fec, type: 3}
   rollSFXs:
   - {fileID: 8300000, guid: 6bf2176b192423548942df7af825541d, type: 3}
+  dropDownImpact: {fileID: 5145817883689228183, guid: 6fc71e2dbcc26ee4ab101fd2def69bc8, type: 3}
 --- !u!114 &4470682380634075274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,37 +163,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!1 &6997324016974876337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939860343849458443}
-  m_Layer: 3
-  m_Name: DropDownParticle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1939860343849458443
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6997324016974876337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2149625693736390169}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7516317692623149494
 GameObject:
   m_ObjectHideFlags: 0
