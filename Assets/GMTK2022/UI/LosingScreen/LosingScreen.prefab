@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1f83c1aa44c1f48b548e8b33ac47f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LooseScreenCanvas: {fileID: 5887855496205201554}
+  LoseScreenCanvas: {fileID: 5887855496205201554}
 --- !u!1 &5567999419701781385
 GameObject:
   m_ObjectHideFlags: 0

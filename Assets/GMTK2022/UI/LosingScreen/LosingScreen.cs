@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LosingScreen : MonoBehaviour
 {
-    [SerializeField] private Canvas LooseScreenCanvas;
+    [SerializeField] private Canvas LoseScreenCanvas;
 
     private void OnEnable()
     {
@@ -18,7 +18,7 @@ public class LosingScreen : MonoBehaviour
 
     public void ShowLosingScreen()
     {
-        LooseScreenCanvas.gameObject.SetActive(true);
+        LoseScreenCanvas.gameObject.SetActive(true);
     }
 
     public void Replay()
