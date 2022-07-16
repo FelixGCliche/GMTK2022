@@ -16,16 +16,25 @@ public class SoundManager : SingletonPersistant<SoundManager>
         for(int i = 0; i < AUDIO_SOURCE_AMOUNT; i++)
         {
             GameObject newAudioSource = new GameObject();
-            Instantiate(newAudioSource, transform.position, transform.rotation);
             newAudioSource.name = "AudioSource" + i;
             audioSource[i] = newAudioSource.AddComponent<AudioSource>();
         }
     }
 
-    public void PlaySfx(AudioClip sfx, Vector3 sfxPosition)
+    public void PlaySfx(AudioClip sfx, Vector3 sfxPosition, bool randomizePitch = false)
     {
         audioSource[currentAudioSource].clip = sfx;
         audioSource[currentAudioSource].transform.position = sfxPosition;
+
+        if (randomizePitch)
+        {
+            audioSource[currentAudioSource].pitch = Random.Range(0.5f, 1.5f);
+        }
+        else
+        {
+            audioSource[currentAudioSource].pitch = 1;
+        }
+
         audioSource[currentAudioSource].Play();
 
         if (++currentAudioSource >= AUDIO_SOURCE_AMOUNT)

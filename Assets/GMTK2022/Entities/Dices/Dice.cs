@@ -53,7 +53,7 @@ public class Dice : MonoBehaviour, IDrag
         diceRigidBody.useGravity = false;
         diceState = DiceState.PICKED;
         diceRigidBody.constraints = RigidbodyConstraints.FreezeRotation;
-        SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position);
+        SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position, true);
     }
 
     public void OnEndDrag()
@@ -71,10 +71,10 @@ public class Dice : MonoBehaviour, IDrag
 
     private void OnCollisionEnter(Collision collision)
     {
+        SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position, true);
         if(diceState == DiceState.FALLING)
         {
             diceState = DiceState.STABILIZING;
-            SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position);
         }
     }
 
