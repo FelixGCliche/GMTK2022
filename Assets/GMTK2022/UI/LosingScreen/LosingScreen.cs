@@ -8,12 +8,12 @@ public class LosingScreen : MonoBehaviour
 
     private void OnEnable()
     {
-        TurnManager.Instance.EndGame += ShowLosingScreen;
+        DiceGameManager.Instance.EndGame += ShowLosingScreen;
     }
 
     private void OnDisable()
     {
-        TurnManager.Instance.EndGame -= ShowLosingScreen;
+        DiceGameManager.Instance.EndGame -= ShowLosingScreen;
     }
 
     public void ShowLosingScreen()
@@ -23,7 +23,9 @@ public class LosingScreen : MonoBehaviour
 
     public void Replay()
     {
-        LoadingManager.Instance.ChangeScene("GameScene");
+        DiceGameManager.Instance.GameRestarted();
+        LoseScreenCanvas.gameObject.SetActive(false);
+        //LoadingManager.Instance.ChangeScene("GameScene");
     }
 
     public void ReturnToMainMenu()
