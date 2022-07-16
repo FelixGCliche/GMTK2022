@@ -16,13 +16,17 @@ public class Dice : MonoBehaviour, IDrag
     private int rollValue = 1;
     private DiceState diceState = DiceState.SPINNING;
 
+    private QuickOutline quickOutline;
+
     private void Awake()
     {
         diceRigidBody = GetComponent<Rigidbody>();
+        quickOutline = GetComponent<QuickOutline>();
     }
 
     private void Start()
     {
+        quickOutline.enabled = false;
         Roll();
     }
 
@@ -50,6 +54,7 @@ public class Dice : MonoBehaviour, IDrag
         yield return new WaitForSeconds(0.2f);
         
         diceState = DiceState.PICKABLE;
+        quickOutline.enabled = true;
         diceRigidBody.useGravity = true;
     }
 
@@ -64,6 +69,7 @@ public class Dice : MonoBehaviour, IDrag
     public void OnEndDrag()
     {
         diceRigidBody.useGravity = true;
+        quickOutline.enabled = false;
         diceState = DiceState.FALLING;
         diceRigidBody.constraints = RigidbodyConstraints.None;
         //diceRigidBody.velocity = Vector3.zero;
