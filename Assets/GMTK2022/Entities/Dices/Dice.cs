@@ -4,6 +4,9 @@ using DG.Tweening;
 
 public class Dice : MonoBehaviour, IDrag
 {
+    public delegate void ChangeStateDelegate(DiceState newDiceState);
+    public event ChangeStateDelegate ChangeState;
+
     [Header("Sides")]
     [SerializeField] public Vector3[] sidesAngles;
 
@@ -38,7 +41,7 @@ public class Dice : MonoBehaviour, IDrag
 
     private IEnumerator Spin()
     {
-        diceState = DiceState.SPINNING;
+        ChangeDiceState(DiceState.SPINNING);
             yield return null;
         SoundManager.Instance.PlaySfx(rollSFXs[0], transform.position, true);
         diceRigidBody.useGravity = false;
@@ -53,7 +56,7 @@ public class Dice : MonoBehaviour, IDrag
         transform.DOScale(transform.localScale * diceScale, 0.1f);
         yield return new WaitForSeconds(0.2f);
         
-        diceState = DiceState.PICKABLE;
+        ChangeDiceState(DiceState.PICKABLE);
         quickOutline.enabled = true;
         diceRigidBody.useGravity = true;
     }
@@ -61,7 +64,7 @@ public class Dice : MonoBehaviour, IDrag
     public void OnStartDrag()
     {
         diceRigidBody.useGravity = false;
-        diceState = DiceState.PICKED;
+        ChangeDiceState( DiceState.PICKED);
         diceRigidBody.constraints = RigidbodyConstraints.FreezeRotation;
         SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position, true);
     }
@@ -70,7 +73,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         diceRigidBody.useGravity = true;
         quickOutline.enabled = false;
-        diceState = DiceState.FALLING;
+        ChangeDiceState(DiceState.FALLING);
         diceRigidBody.constraints = RigidbodyConstraints.None;
         //diceRigidBody.velocity = Vector3.zero;
     }
@@ -85,7 +88,7 @@ public class Dice : MonoBehaviour, IDrag
         SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position, true);
         if(diceState == DiceState.FALLING)
         {
-            diceState = DiceState.STABILIZING;
+            ChangeDiceState(DiceState.STABILIZING);
         }
     }
 
@@ -96,9 +99,16 @@ public class Dice : MonoBehaviour, IDrag
             if(diceRigidBody.velocity.magnitude <= 0.1 && diceState != DiceState.FALLEN)
             {
                 DiceGameManager.Instance.EndCurrentTurn();
-                diceState = DiceState.FALLEN;
+                ChangeDiceState(DiceState.FALLEN);
             }
         }
+    }
+
+    private void ChangeDiceState(DiceState newDiceState)
+    {
+        diceState = newDiceState;
+        if(ChangeState != null)
+            ChangeState(diceState);
     }
 
 }
