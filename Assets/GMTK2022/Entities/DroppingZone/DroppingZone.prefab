@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494159844726109731}
   m_Layer: 0
-  m_Name: DroppingZoneHeightEvaluator
+  m_Name: TowerHeightEvaluator
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68941c12a0122a45a7eafda8ce0b6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droppingZoneHeightEvaluator: {fileID: 4291121668183208955}
+  towerHeightEvaluator: {fileID: 4291121668183208955}
+  towerHeightBase: {fileID: 0}
   zOffset: 1
 --- !u!1001 &8635530971998144990
 PrefabInstance:

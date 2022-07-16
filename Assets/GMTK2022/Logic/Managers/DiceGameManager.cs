@@ -7,6 +7,9 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void StartGameDelegate();
     public event StartGameDelegate StartGame;
 
+    public delegate void EndTurnDelegate();
+    public event EndTurnDelegate EndTurn;
+
     public delegate void NextTurnDelegate();
     public event NextTurnDelegate NextTurn;
 
@@ -33,6 +36,16 @@ public class DiceGameManager : Singleton<DiceGameManager>
             gameIsActive = true;
             if(StartGame != null)
                 StartGame();
+            StartNextTurn();
+        }
+    }
+
+    public void EndCurrentTurn()
+    {
+        if(gameIsActive)
+        {
+            if(EndTurn != null)
+                EndTurn();
             StartNextTurn();
         }
     }
@@ -74,11 +87,11 @@ public class DiceGameManager : Singleton<DiceGameManager>
             RestartGame();
     }
 
-    public void AddScore(int scoreToAdd)
+    public void SetScore(int newScore)
     {
         if(gameIsActive)
         {
-            score += scoreToAdd;
+            score = newScore;
             if(UpdateScore != null)
                 UpdateScore(score);
         }
