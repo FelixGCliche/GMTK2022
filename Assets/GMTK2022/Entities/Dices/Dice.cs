@@ -12,9 +12,6 @@ public class Dice : MonoBehaviour, IDrag
     [SerializeField] public AudioClip[] dropSFXs;
 
     private Rigidbody diceRigidBody;
-    private bool hasBeenDropped = false;
-    private bool waitingToStabilize = false;
-    private bool isActiveDice = true;
     private int rollValue = 1;
     private DiceState diceState = DiceState.SPINNING;
 
@@ -32,7 +29,6 @@ public class Dice : MonoBehaviour, IDrag
     {
         rollValue = Random.Range(0, sidesAngles.Length) + 1;
         StartCoroutine(Spin());
-        //transform.rotation = Quaternion.Euler(sidesAngles[rollValue-1]);
     }
 
     private IEnumerator Spin()
@@ -76,22 +72,21 @@ public class Dice : MonoBehaviour, IDrag
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(hasBeenDropped)
+        if(diceState == DiceState.FALLING)
         {
-            diceState = DiceState.FALLEN;
+            diceState = DiceState.STABILIZING;
             SoundManager.Instance.PlaySfx(dropSFXs[Random.Range(0, dropSFXs.Length)], transform.position);
-            waitingToStabilize = true;
         }
     }
 
     private void Update()
     {
-        if(waitingToStabilize)
+        if(diceState == DiceState.STABILIZING)
         {
             if(diceRigidBody.velocity.magnitude <= 0.1 && isActiveDice )
             {
                 TurnManager.Instance.StartNextTurn();
-                isActiveDice = false;
+                DiceState.FALLEN;
             }
         }
     }

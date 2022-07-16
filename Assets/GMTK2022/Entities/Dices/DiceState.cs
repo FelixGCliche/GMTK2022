@@ -8,5 +8,6 @@ public enum DiceState
     PICKABLE,
     PICKED,
     FALLING,
+    STABILIZING,
     FALLEN
 }
