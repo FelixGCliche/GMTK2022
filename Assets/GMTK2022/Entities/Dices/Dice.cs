@@ -61,7 +61,6 @@ public class Dice : MonoBehaviour, IDrag
         diceRigidBody.useGravity = true;
         diceState = DiceState.FALLING;
         diceRigidBody.constraints = RigidbodyConstraints.None;
-        hasBeenDropped = true;
         //diceRigidBody.velocity = Vector3.zero;
     }
 
@@ -83,10 +82,10 @@ public class Dice : MonoBehaviour, IDrag
     {
         if(diceState == DiceState.STABILIZING)
         {
-            if(diceRigidBody.velocity.magnitude <= 0.1 && isActiveDice )
+            if(diceRigidBody.velocity.magnitude <= 0.1 && diceState != DiceState.FALLEN)
             {
                 TurnManager.Instance.StartNextTurn();
-                DiceState.FALLEN;
+                diceState = DiceState.FALLEN;
             }
         }
     }
