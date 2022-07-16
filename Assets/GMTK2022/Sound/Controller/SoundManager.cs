@@ -61,4 +61,13 @@ public class SoundManager : SingletonPersistant<SoundManager>
         if (++currentAudioSource >= AUDIO_SOURCE_AMOUNT)
             currentAudioSource = 0;
     }
+
+    public void SetVolume(float value)
+    {
+        musicSource.volume = value;
+        foreach (AudioSource source in sfxSources)
+        {
+            source.volume = value;
+        }
+    }
 }

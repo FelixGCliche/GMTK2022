@@ -7,13 +7,15 @@ using TMPro;
 
 public class SettingsMenuController : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer;
+    static float currentVolume = 1;
+
+    [SerializeField] private Slider volumeSlider;
     [SerializeField] private Toggle fullscreenToggle;
     [SerializeField] private TMP_Dropdown resolutionsDropdown;
 
     Resolution[] resolutions;
 
-    void Start()
+    private void Start()
     {
         //Set Resolution Dropdown
         resolutions = Screen.resolutions;
@@ -42,11 +44,14 @@ public class SettingsMenuController : MonoBehaviour
         //Set Fullscreen Toggle
         fullscreenToggle.isOn = Screen.fullScreen;
 
+        volumeSlider.value = currentVolume;
+        volumeSlider.onValueChanged.AddListener(delegate {SetVolume(); });
     }
 
-    public void SetLevel (float sliderValue)
+    public void SetResolution(int resolutionIndex)
     {
-        audioMixer.SetFloat("VolMixer", Mathf.Log10(sliderValue) * 20);
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width,resolution.height,Screen.fullScreen);
     }
 
     public void SetFullscreen(bool isFullscreen)
@@ -54,10 +59,10 @@ public class SettingsMenuController : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
-    public void SetResolution(int resolutionIndex)
+    public void SetVolume()
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width,resolution.height,Screen.fullScreen);
+        currentVolume = volumeSlider.value;
+        SoundManager.Instance.SetVolume(currentVolume);
     }
 }
 
