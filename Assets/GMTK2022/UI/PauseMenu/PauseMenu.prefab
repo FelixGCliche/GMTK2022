@@ -144,6 +144,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1f66d45f-90df-45be-836d-1c2c95273653
     m_ActionName: Pause/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ebd0efe8-8938-44cc-8bb2-39ea01f391fb
+    m_ActionName: Player/RotateRight[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a306797f-e849-4c2f-a0e0-692f7370e037
+    m_ActionName: Player/RotateLeft[/Keyboard/a]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Pause
@@ -358,6 +366,34 @@ PrefabInstance:
     - target: {fileID: 7535536947292470455, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1235812926645705265}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Replay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558916630628094231, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c70da7b7deff1742898d82b9236ba58, type: 3}

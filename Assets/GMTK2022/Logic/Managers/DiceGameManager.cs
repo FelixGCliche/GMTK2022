@@ -13,6 +13,12 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void EndGameDelegate();
     public event EndGameDelegate EndGame;
 
+    public delegate void GameLostDelegate();
+    public event GameLostDelegate GameLost;
+
+    public delegate void RestartGameDelegate();
+    public event RestartGameDelegate RestartGame;
+
     public delegate void UpdateScoreDelegate(int newScore);
     public event UpdateScoreDelegate UpdateScore;
 
@@ -40,6 +46,16 @@ public class DiceGameManager : Singleton<DiceGameManager>
         }
     }
 
+    public void LostGame()
+    {
+        if(gameIsActive)
+        {
+            if(GameLost != null)
+                GameLost();
+            GameEnded();
+        }
+    }
+
     public void GameEnded()
     {
         if(gameIsActive)
@@ -48,6 +64,14 @@ public class DiceGameManager : Singleton<DiceGameManager>
             if(EndGame != null)
                 EndGame();
         }
+    }
+
+    public void GameRestarted()
+    {
+        ResetScore();
+        gameIsActive = false;
+        if(RestartGame != null)
+            RestartGame();
     }
 
     public void AddScore(int scoreToAdd)

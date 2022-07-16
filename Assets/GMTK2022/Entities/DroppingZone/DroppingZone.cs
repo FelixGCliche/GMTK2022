@@ -7,18 +7,24 @@ public class DroppingZone : MonoBehaviour
 {
     [SerializeField] private GameObject droppingZoneHeightEvaluator;
     [SerializeField] private float zOffset;
-    [SerializeField] private float baseY;
+
+    private float baseY;
+
+    private void  Awake()
+    {
+        baseY = transform.position.y;
+    }
 
     private void OnEnable()
     {
         DiceGameManager.Instance.NextTurn += AdjustHeight;
-        DiceGameManager.Instance.StartGame += ResetHeight;
+        DiceGameManager.Instance.RestartGame += ResetHeight;
     }
 
     private void OnDisable()
     {
         DiceGameManager.Instance.NextTurn -= AdjustHeight;
-        DiceGameManager.Instance.StartGame -= ResetHeight;
+        DiceGameManager.Instance.RestartGame -= ResetHeight;
     }
 
     private void AdjustHeight()
@@ -32,6 +38,6 @@ public class DroppingZone : MonoBehaviour
 
     private void ResetHeight()
     {
-        transform.DOMoveY(baseY, 0.5f);
+        transform.DOMoveY(baseY, 0.5f).OnComplete(DiceGameManager.Instance.GameStarted);
     }
 }

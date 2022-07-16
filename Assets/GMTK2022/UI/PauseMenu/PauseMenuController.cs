@@ -31,6 +31,13 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
+    public void Replay()
+    {
+        DiceGameManager.Instance.GameRestarted();
+        ClosePauseMenu();
+    }
+
+
     public void ShowSettingsMenu()
     {
         pauseMenuPage.SetActive(false);
@@ -39,6 +46,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        DiceGameManager.Instance.GameEnded();
         LoadingManager.Instance.ChangeScene("MainMenu");
     }
 }
