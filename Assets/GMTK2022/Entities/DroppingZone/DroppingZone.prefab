@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppingZoneHeightEvaluator: {fileID: 4291121668183208955}
   zOffset: 1
+  baseY: 1
 --- !u!1 &8234339918765715923
 GameObject:
   m_ObjectHideFlags: 0

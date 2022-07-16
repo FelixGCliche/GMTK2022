@@ -11,13 +11,13 @@ public class DiceSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        DiceGameManager.Instance.RestartGame += ClearDice;
+        DiceGameManager.Instance.StartGame  += ClearDice;
         DiceGameManager.Instance.NextTurn += SpawnDice;
     }
 
     private void OnDisable()
     {
-        DiceGameManager.Instance.RestartGame -= ClearDice;
+        DiceGameManager.Instance.StartGame -= ClearDice;
         DiceGameManager.Instance.NextTurn -= SpawnDice;
     }
 

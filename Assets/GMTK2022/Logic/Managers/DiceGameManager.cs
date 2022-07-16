@@ -13,9 +13,6 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void EndGameDelegate();
     public event EndGameDelegate EndGame;
 
-    public delegate void RestartGameDelegate();
-    public event RestartGameDelegate RestartGame;
-
     public delegate void UpdateScoreDelegate(int newScore);
     public event UpdateScoreDelegate UpdateScore;
 
@@ -50,17 +47,6 @@ public class DiceGameManager : Singleton<DiceGameManager>
             gameIsActive = false;
             if(EndGame != null)
                 EndGame();
-        }
-    }
-
-    public void GameRestarted()
-    {
-        if(!gameIsActive)
-        {
-            ResetScore();
-            if(RestartGame != null)
-                RestartGame();
-            GameStarted();
         }
     }
 

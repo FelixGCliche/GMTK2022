@@ -23,7 +23,7 @@ public class LosingScreen : MonoBehaviour
 
     public void Replay()
     {
-        DiceGameManager.Instance.GameRestarted();
+        DiceGameManager.Instance.GameStarted();
         LoseScreenCanvas.gameObject.SetActive(false);
         //LoadingManager.Instance.ChangeScene("GameScene");
     }
