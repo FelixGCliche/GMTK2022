@@ -23,7 +23,6 @@ public class DroppingZone : MonoBehaviour
         RaycastHit hit;
         if(Physics.BoxCast(droppingZoneHeightEvaluator.transform.position, new Vector3(1.5f,1.5f,1.5f), Vector3.down, out hit, droppingZoneHeightEvaluator.transform.rotation,  Mathf.Infinity, LayerMask.GetMask("Draggable")))
         {
-            Debug.Log("hit");
             transform.DOMoveY(hit.point.y + zOffset, 0.5f);
         }
     }
