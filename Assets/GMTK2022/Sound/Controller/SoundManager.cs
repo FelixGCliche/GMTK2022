@@ -2,18 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : SingletonPersistant<SoundManager>
 {
-    [SerializeField] private AudioSource[] grabSfx;
-    [SerializeField] private AudioSource[] dropSfx;
+    private const int AUDIO_SOURCE_AMOUNT = 10;
 
-    public void OnGrab()
+    private AudioSource[] audioSource;
+
+    private int currentAudioSource = 0;
+
+    public void InitAudioSource() 
     {
-        grabSfx[Random.Range(0,grabSfx.Length)].Play();
+        audioSource = new AudioSource[AUDIO_SOURCE_AMOUNT];
+        for(int i = 0; i < AUDIO_SOURCE_AMOUNT; i++)
+        {
+            GameObject newAudioSource = new GameObject();
+            Instantiate(newAudioSource, transform.position, transform.rotation);
+            newAudioSource.name = "AudioSource" + i;
+            audioSource[0] = newAudioSource.AddComponent<AudioSource>();
+        }
     }
 
-    public void OnDrop()
+    public void PlaySfx(AudioClip sfx)
     {
-        dropSfx[Random.Range(0,dropSfx.Length)].Play();
+        audioSource[0].clip = sfx;
+        audioSource[0].Play();
+
+        if (++currentAudioSource >= AUDIO_SOURCE_AMOUNT)
+            currentAudioSource = 0;
     }
 }

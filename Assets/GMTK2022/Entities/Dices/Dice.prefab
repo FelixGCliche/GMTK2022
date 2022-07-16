@@ -127,3 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1fd3c354f58674aba244c65f918523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabSFXs:
+  - {fileID: 8300000, guid: 9123f987852955646ae2dd9744b1d39b, type: 3}
+  - {fileID: 8300000, guid: d94c761e995389a44b4225872ab5d78f, type: 3}
+  dropSFXs:
+  - {fileID: 8300000, guid: 0d28f300a600e5c4d928d1d31f0462f2, type: 3}
+  - {fileID: 8300000, guid: 718a37c484a82964e870f21c851f2fec, type: 3}

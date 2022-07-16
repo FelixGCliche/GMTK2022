@@ -9,7 +9,6 @@ public class DragAndDropController : MonoBehaviour
     [SerializeField] private InputAction mouseClick;
     [SerializeField] private float mouseDragPhysicsSpeed = 10f;
     [SerializeField] private float mouseDragSpeed = 0.1f;
-    [SerializeField] private SoundManager soundManager;
 
     private Camera mainCamera;
     private Vector3 velocity = Vector3.zero;
@@ -40,7 +39,6 @@ public class DragAndDropController : MonoBehaviour
         {
             if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || (hit.collider.gameObject.GetComponent<IDrag>() != null && hit.collider.gameObject.GetComponent<IDrag>().CanBeDragged())))
             {
-                soundManager.OnGrab();
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
             }
         }
