@@ -18,12 +18,14 @@ public class Dice : MonoBehaviour, IDrag
     public void OnStartDrag()
     {
         diceRigidBody.useGravity = false;
+        diceRigidBody.constraints = RigidbodyConstraints.FreezeRotation;
         SoundManager.Instance.PlaySfx(grabSFXs[Random.Range(0, grabSFXs.Length)], transform.position);
     }
 
     public void OnEndDrag()
     {
         diceRigidBody.useGravity = true;
+        diceRigidBody.constraints = RigidbodyConstraints.None;
         hasBeenDropped = true;
         //diceRigidBody.velocity = Vector3.zero;
     }
