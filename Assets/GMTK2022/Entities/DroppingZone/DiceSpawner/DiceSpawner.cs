@@ -7,18 +7,31 @@ public class DiceSpawner : MonoBehaviour
     [SerializeField] private GameObject spawner;
     [SerializeField] private Dice diceToSpawn;
 
+    private List<Dice> dices = new List<Dice>();
+
     private void OnEnable()
     {
-        TurnManager.Instance.NextTurn += SpawnDice;
+        DiceGameManager.Instance.RestartGame  += ClearDice;
+        DiceGameManager.Instance.NextTurn += SpawnDice;
     }
 
     private void OnDisable()
     {
-        TurnManager.Instance.NextTurn -= SpawnDice;
+        DiceGameManager.Instance.RestartGame -= ClearDice;
+        DiceGameManager.Instance.NextTurn -= SpawnDice;
     }
 
-    public void SpawnDice()
+    private void SpawnDice()
     {
-        Instantiate(diceToSpawn, spawner.transform.position, spawner.transform.rotation);
+        dices.Add(Instantiate(diceToSpawn, spawner.transform.position, spawner.transform.rotation));
+    }
+
+    private void ClearDice()
+    {
+        foreach(Dice dice in dices)
+        {
+            Destroy(dice.gameObject);
+        }
+        dices.Clear();
     }
 }
