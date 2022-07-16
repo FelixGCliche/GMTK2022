@@ -7,8 +7,18 @@ public class TurnManager : Singleton<TurnManager>
     public delegate void NextTurnDelegate();
     public event NextTurnDelegate NextTurn;
 
+    public delegate void EndGameDelegate();
+    public event NextTurnDelegate EndGame;
+
     public void StartNextTurn()
     {
-        NextTurn();
+        if(NextTurn != null)
+            NextTurn();
+    }
+
+    public void GameEnded()
+    {
+        if(EndGame != null)
+            EndGame();
     }
 }
