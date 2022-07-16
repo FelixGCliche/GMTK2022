@@ -7,7 +7,7 @@ using TMPro;
 
 public class SettingsMenuController : MonoBehaviour
 {
-    static float currentVolume = 1;
+    static float currentVolume = 1f;
 
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Toggle fullscreenToggle;

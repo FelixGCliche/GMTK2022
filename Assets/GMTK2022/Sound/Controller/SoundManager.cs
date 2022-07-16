@@ -20,6 +20,7 @@ public class SoundManager : SingletonPersistant<SoundManager>
             DontDestroyOnLoad(newAudioSource.gameObject);
             newAudioSource.name = "MusicSource";
             musicSource = newAudioSource.AddComponent<AudioSource>();
+            musicSource.loop = true;
 
             sfxSources = new AudioSource[AUDIO_SOURCE_AMOUNT];
             for(int i = 0; i < AUDIO_SOURCE_AMOUNT; i++)
@@ -28,6 +29,7 @@ public class SoundManager : SingletonPersistant<SoundManager>
                 DontDestroyOnLoad(newAudioSource.gameObject);
                 newAudioSource.name = "SFXSource" + i;
                 sfxSources[i] = newAudioSource.AddComponent<AudioSource>();
+                sfxSources[i].spatialBlend = 0.5f;
             }
             isInitialized = true;
         }
