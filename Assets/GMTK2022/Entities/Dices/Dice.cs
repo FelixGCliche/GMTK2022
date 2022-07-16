@@ -87,9 +87,8 @@ public class Dice : MonoBehaviour, IDrag
         {
             if(diceRigidBody.velocity.magnitude <= 0.1 && diceState != DiceState.FALLEN)
             {
-                DiceGameManager.Instance.StartNextTurn();
+                DiceGameManager.Instance.EndCurrentTurn();
                 diceState = DiceState.FALLEN;
-                DiceGameManager.Instance.AddScore(1);
             }
         }
     }
