@@ -10,6 +10,7 @@ public class Dice : MonoBehaviour, IDrag
     [Header("SFX")]
     [SerializeField] public AudioClip[] grabSFXs;
     [SerializeField] public AudioClip[] dropSFXs;
+    [SerializeField] public AudioClip[] rollSFXs;
 
     private Rigidbody diceRigidBody;
     private int rollValue = 1;
@@ -34,6 +35,8 @@ public class Dice : MonoBehaviour, IDrag
     private IEnumerator Spin()
     {
         diceState = DiceState.SPINNING;
+            yield return null;
+        SoundManager.Instance.PlaySfx(rollSFXs[0], transform.position, true);
         diceRigidBody.useGravity = false;
 
         for (int i = 0; i < 3; i++)
