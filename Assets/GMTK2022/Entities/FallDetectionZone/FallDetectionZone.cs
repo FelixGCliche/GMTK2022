@@ -8,7 +8,7 @@ public class FallDetectionZone : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Dice"))
         {
-            TurnManager.Instance.GameEnded();
+            DiceGameManager.Instance.LostGame();
         }
     }
 }
