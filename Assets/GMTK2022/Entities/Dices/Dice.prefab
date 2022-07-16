@@ -127,6 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1fd3c354f58674aba244c65f918523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sidesAngles:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 90}
+  - {x: 90, y: 0, z: 0}
+  - {x: 0, y: 0, z: 180}
+  - {x: 270, y: 0, z: 0}
+  - {x: 0, y: 0, z: 270}
   grabSFXs:
   - {fileID: 8300000, guid: 9123f987852955646ae2dd9744b1d39b, type: 3}
   - {fileID: 8300000, guid: d94c761e995389a44b4225872ab5d78f, type: 3}
