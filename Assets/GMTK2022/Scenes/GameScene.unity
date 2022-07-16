@@ -563,6 +563,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166794760488507685, guid: c3074cb58edf529439f24465087e54ca, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166794760488507685, guid: c3074cb58edf529439f24465087e54ca, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026303876855615982, guid: c3074cb58edf529439f24465087e54ca, type: 3}
+      propertyPath: focusPoint
+      value: 
+      objectReference: {fileID: 1842364664}
+    - target: {fileID: 1026303876855615982, guid: c3074cb58edf529439f24465087e54ca, type: 3}
+      propertyPath: focusPointZOffset
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1482802782482136620, guid: c3074cb58edf529439f24465087e54ca, type: 3}
       propertyPath: soundManager
       value: 
