@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoosingScreen : MonoBehaviour
+public class LosingScreen : MonoBehaviour
 {
     [SerializeField] private Canvas LooseScreenCanvas;
 
     private void OnEnable()
     {
-        TurnManager.Instance.EndGame += ShowLoosingScreen;
+        TurnManager.Instance.EndGame += ShowLosingScreen;
     }
 
     private void OnDisable()
     {
-        TurnManager.Instance.EndGame -= ShowLoosingScreen;
+        TurnManager.Instance.EndGame -= ShowLosingScreen;
     }
 
-    public void ShowLoosingScreen()
+    public void ShowLosingScreen()
     {
         LooseScreenCanvas.gameObject.SetActive(true);
     }

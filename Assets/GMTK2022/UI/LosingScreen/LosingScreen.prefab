@@ -653,7 +653,7 @@ GameObject:
   - component: {fileID: 8000709891316846902}
   - component: {fileID: 2269642394691068691}
   m_Layer: 0
-  m_Name: LoosingScreen
+  m_Name: LosingScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
