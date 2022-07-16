@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour, IDrag
 {
+    [SerializeField] private SoundManager soundManager;
+
     private Rigidbody diceRigidBody;
     private bool hasBeenDropped = false;
     private bool waitingToStabilize = false;
@@ -33,6 +35,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         if(hasBeenDropped)
         {
+            soundManager.OnDrop();
             waitingToStabilize = true;
         }
     }
@@ -48,7 +51,5 @@ public class Dice : MonoBehaviour, IDrag
             }
         }
     }
-
-
 
 }
