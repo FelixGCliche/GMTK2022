@@ -70,7 +70,7 @@ MonoBehaviour:
   m_text: "F\xE9lix Gagn\xE9 Cliche - Programmer & Graphic Designer\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_sharedMaterial: {fileID: 1969465891917245268, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -221,7 +221,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_sharedMaterial: {fileID: 1969465891917245268, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -417,9 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4831331219847726035, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}
       propertyPath: m_text
-      value: 'Team
-
-'
+      value: Team
       objectReference: {fileID: 0}
     - target: {fileID: 7681901751061953603, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -439,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112084692834421613, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}
       propertyPath: m_text
-      value: Gabriel St-Laurent Recoura - Game Director & Programmer
+      value: Gabriel St-Laurent-Recoura - Game Director & Programmer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}

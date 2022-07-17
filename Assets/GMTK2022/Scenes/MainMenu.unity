@@ -916,11 +916,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8451172315922805986, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
       propertyPath: m_fontSize
-      value: 28
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451172315922805986, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
+      propertyPath: m_margin.x
+      value: 39.30168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451172315922805986, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
+      propertyPath: m_margin.z
+      value: 89.05904
       objectReference: {fileID: 0}
     - target: {fileID: 8451172315922805986, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
       propertyPath: m_fontSizeBase
-      value: 28
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451172315922805986, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8473461911983849286, guid: 3061c94e4c44fdb4e8d786ce2ed081de, type: 3}
       propertyPath: m_AnchorMax.y

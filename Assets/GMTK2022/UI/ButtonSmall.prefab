@@ -31,6 +31,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ed826c4d100a1a41b2f51e170d8428f, type: 3}
+    - target: {fileID: 5690177851574273782, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+    - target: {fileID: 5690177851574273782, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4151704879371199465, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
     - target: {fileID: 6440902933832563379, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
       propertyPath: m_SizeDelta.x
       value: 64
