@@ -14,6 +14,8 @@ public class DragAndDropController : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
+    private bool isActive = true;
+
     private void Awake()
     {
         mainCamera = Camera.main;
@@ -23,23 +25,28 @@ public class DragAndDropController : MonoBehaviour
     {
         mouseClick.Enable();
         mouseClick.performed += MousePressed;
+        DiceGameManager.Instance.PauseGame += PauseGame;
     }
 
     private void OnDisable()
     {
+        DiceGameManager.Instance.PauseGame -= PauseGame;
         mouseClick.performed -= MousePressed;
         mouseClick.Disable();
     }
 
     public void MousePressed(InputAction.CallbackContext context)
     {
-        Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-        RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Draggable")))
+        if(isActive)
         {
-            if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || (hit.collider.gameObject.GetComponent<IDrag>() != null && hit.collider.gameObject.GetComponent<IDrag>().CanBeDragged())))
+            Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Draggable")))
             {
-                StartCoroutine(DragUpdate(hit.collider.gameObject));
+                if(hit.collider != null && (hit.collider.gameObject.CompareTag("Draggable") || (hit.collider.gameObject.GetComponent<IDrag>() != null && hit.collider.gameObject.GetComponent<IDrag>().CanBeDragged())))
+                {
+                    StartCoroutine(DragUpdate(hit.collider.gameObject));
+                }
             }
         }
     }
@@ -70,5 +77,10 @@ public class DragAndDropController : MonoBehaviour
             
         }
         iDragComponent?.OnEndDrag();
+    }
+
+    private void PauseGame(bool isPaused)
+    {
+        isActive = !isPaused;
     }
 }

@@ -25,6 +25,9 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void UpdateScoreDelegate(int newScore);
     public event UpdateScoreDelegate UpdateScore;
 
+    public delegate void PauseGameDelegate(bool isPaused);
+    public event PauseGameDelegate PauseGame;
+
     private int score = 0;
     private bool gameIsActive = false;
 
@@ -104,6 +107,19 @@ public class DiceGameManager : Singleton<DiceGameManager>
             score = 0;
             if(UpdateScore != null)
                 UpdateScore(score);
+        }
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void SetGamePause(bool isPaused)
+    {
+        if(PauseGame != null)
+        {
+            PauseGame(isPaused);
         }
     }
 }

@@ -32,11 +32,11 @@ public class Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         if (Centered)
         {
-            iconContainerTransform.DOLocalMoveX(iconDeltaX, 0.33f);
-            maskRectTransform.DOSizeDelta(targetMaskSizeDelta, 0.33f);
+            iconContainerTransform.DOLocalMoveX(iconDeltaX, 0.33f).SetUpdate(true);
+            maskRectTransform.DOSizeDelta(targetMaskSizeDelta, 0.33f).SetUpdate(true);
         }
         
-        labelContainerTransform.DOLocalMoveX(0, 0.33f);
+        labelContainerTransform.DOLocalMoveX(0, 0.33f).SetUpdate(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -54,10 +54,10 @@ public class Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         if (Centered)
         {
-            iconContainerTransform.DOLocalMoveX(0, 0.33f);
-            maskRectTransform.DOSizeDelta(new Vector2(0,targetMaskSizeDelta.y), 0.33f);
+            iconContainerTransform.DOLocalMoveX(0, 0.33f).SetUpdate(true);
+            maskRectTransform.DOSizeDelta(new Vector2(0,targetMaskSizeDelta.y), 0.33f).SetUpdate(true);
         }
         
-        labelContainerTransform.DOLocalMoveX(labelDeltaX, 0.33f);
+        labelContainerTransform.DOLocalMoveX(labelDeltaX, 0.33f).SetUpdate(true);
     }
 }
