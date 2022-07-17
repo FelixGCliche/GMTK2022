@@ -12,8 +12,6 @@ public class FallDetectionZone : MonoBehaviour
         {
             if (!IsFreemode)
                 DiceGameManager.Instance.LostGame();
-            else
-                DiceGameManager.Instance.AdjustCameraHeight();
         }
     }
 }
