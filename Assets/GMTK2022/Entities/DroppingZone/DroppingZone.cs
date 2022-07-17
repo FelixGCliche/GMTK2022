@@ -9,6 +9,8 @@ public class DroppingZone : MonoBehaviour
     [SerializeField] private GameObject towerHeightBase;
     [SerializeField] private float zOffset;
 
+    private GameCamera gameCamera;
+
     private float baseY;
 
     private void  Awake()
@@ -43,6 +45,7 @@ public class DroppingZone : MonoBehaviour
     {
         float score = GetTowerCurrentHeight() * 200;
         DiceGameManager.Instance.SetScore((int)score);
+
     }
 
     private float GetTowerCurrentHeight()
