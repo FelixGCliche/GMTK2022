@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0174cca6e4698e4893a73ba491e2946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: felix.gagnecliche.dev
+  url: https://felix.gagnecliche.dev/
 --- !u!1 &5772189208067418589
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0174cca6e4698e4893a73ba491e2946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: 
+  url: https://nicolasbisson.com/
 --- !u!1001 &8373120967588889290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,4 +463,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0174cca6e4698e4893a73ba491e2946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  url: http://gabrielstlaurentrecoura.dev/
