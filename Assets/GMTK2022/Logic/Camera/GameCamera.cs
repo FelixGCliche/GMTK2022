@@ -20,7 +20,6 @@ public class GameCamera : MonoBehaviour
             float distance = Vector3.Distance(transform.position, focusPoint.transform.position);
             if(distance  - (zoomRate * Time.deltaTime) > minDistance)
             {
-                Debug.Log(distance);
                 Vector3 newPosition = transform.position + ((focusPoint.transform.position - transform.position).normalized * (zoomRate * Time.deltaTime));
                 transform.position = newPosition;
             }
