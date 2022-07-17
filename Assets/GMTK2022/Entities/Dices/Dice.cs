@@ -62,7 +62,7 @@ public class Dice : MonoBehaviour, IDrag
             yield return new WaitForSeconds(0.25f);
         }
         transform.DORotate(sidesAngles[rollValue-1], 0.1f);
-        float diceScale = 0.5f + (1f * rollValue / sidesAngles.Length);
+        float diceScale = 0.5f + (2f * rollValue / sidesAngles.Length);
         transform.DOScale(transform.localScale * diceScale, 0.1f);
         yield return new WaitForSeconds(0.2f);
         
