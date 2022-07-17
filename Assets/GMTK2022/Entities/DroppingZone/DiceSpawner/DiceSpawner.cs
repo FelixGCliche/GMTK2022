@@ -6,7 +6,7 @@ public class DiceSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject spawner;
     [SerializeField] private GameObject spawnerPlateform;
-    [SerializeField] private Dice diceToSpawn;
+    [SerializeField] private Dice[] diceToSpawn;
 
     private List<Dice> dices = new List<Dice>();
 
@@ -25,7 +25,7 @@ public class DiceSpawner : MonoBehaviour
     private void SpawnDice()
     {
         spawnerPlateform.SetActive(true);
-        dices.Add(Instantiate(diceToSpawn, spawner.transform.position, spawner.transform.rotation));
+        dices.Add(Instantiate(diceToSpawn[Random.Range(0, diceToSpawn.Length)], spawner.transform.position, spawner.transform.rotation));
         dices[dices.Count - 1].ChangeState += OnDiceStateChanged;
     }
 
