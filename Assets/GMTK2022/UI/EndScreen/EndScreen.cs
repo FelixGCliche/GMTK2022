@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LosingScreen : MonoBehaviour
+public class EndScreen : MonoBehaviour
 {
-    [SerializeField] private Canvas LoseScreenCanvas;
+    [SerializeField] private Canvas endScreenCanvas;
 
     private void OnEnable()
     {
-        DiceGameManager.Instance.GameLost += ShowLosingScreen;
+        DiceGameManager.Instance.GameLost += ShowEndScreen;
     }
 
     private void OnDisable()
     {
-        DiceGameManager.Instance.GameLost -= ShowLosingScreen;
+        DiceGameManager.Instance.GameLost -= ShowEndScreen;
     }
 
-    public void ShowLosingScreen()
+    public void ShowEndScreen()
     {
-        LoseScreenCanvas.gameObject.SetActive(true);
+        endScreenCanvas.gameObject.SetActive(true);
     }
 
     public void Replay()
     {
         DiceGameManager.Instance.GameRestarted();
-        LoseScreenCanvas.gameObject.SetActive(false);
+        endScreenCanvas.gameObject.SetActive(false);
     }
 
     public void ReturnToMainMenu()

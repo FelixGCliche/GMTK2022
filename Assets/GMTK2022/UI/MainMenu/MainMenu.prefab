@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 8060664780548819043}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &6009732134466771422
@@ -262,6 +262,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1796974117229767957, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6512776642144390773}
+    - target: {fileID: 1796974117229767957, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToSettingsMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4694568650943896808, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -302,6 +310,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7477544117240844613, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6512776642144390773}
+    - target: {fileID: 7477544117240844613, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064692006113500930, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6512776642144390773}
+    - target: {fileID: 9064692006113500930, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
 --- !u!1 &3318548099679294999 stripped
@@ -312,11 +336,6 @@ GameObject:
 --- !u!4 &7252655257441071820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1111677718864432712, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
-  m_PrefabInstance: {fileID: 7767552091622833284}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8060664780548819043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 294660939592512743, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
   m_PrefabInstance: {fileID: 7767552091622833284}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7767552093124986943
