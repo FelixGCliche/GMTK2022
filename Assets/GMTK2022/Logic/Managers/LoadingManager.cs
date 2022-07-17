@@ -50,11 +50,10 @@ public class LoadingManager : SingletonPersistant<LoadingManager>
             yield return null;
         }
 
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(newSceneToLoad));
+
         //FadeOut loadingScreen
         FadeOutLoadingScreen(nbSecForFade);
-        yield return new WaitForSeconds(nbSecForFade);
-
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(newSceneToLoad));
         yield break;
     }
 }
