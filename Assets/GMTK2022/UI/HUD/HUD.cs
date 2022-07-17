@@ -15,12 +15,16 @@ public class HUD : MonoBehaviour
     {
         DiceGameManager.Instance.EndGame += HideHUD;
         DiceGameManager.Instance.StartGame += ShowHUD;
+        DiceGameManager.Instance.RestartGame += ShowHUD;
+        DiceGameManager.Instance.PauseGame += ToggleHUD;
     }
 
     private void OnDisable()
     {
         DiceGameManager.Instance.EndGame -= HideHUD;
         DiceGameManager.Instance.StartGame -= ShowHUD;
+        DiceGameManager.Instance.RestartGame -= ShowHUD;
+        DiceGameManager.Instance.PauseGame -= ToggleHUD;
     }
 
     private void HideHUD()
@@ -31,5 +35,10 @@ public class HUD : MonoBehaviour
     private void ShowHUD()
     {
         canvas.gameObject.SetActive(true);
+    }
+
+    private void ToggleHUD(bool isPaused)
+    {
+        canvas.gameObject.SetActive(!isPaused);
     }
 }
