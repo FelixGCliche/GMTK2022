@@ -1,10 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class EndScreen : MonoBehaviour
 {
-    [SerializeField] private Canvas endScreenCanvas;
+    private Canvas endScreenCanvas;
+
+    private void Awake()
+    {
+        endScreenCanvas = GetComponent<Canvas>();
+    }
 
     private void OnEnable()
     {
