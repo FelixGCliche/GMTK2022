@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8270036967650383597}
   - component: {fileID: 8244970490809441642}
   m_Layer: 1
-  m_Name: DroppingZone
+  m_Name: DropDownLaserMaterial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
