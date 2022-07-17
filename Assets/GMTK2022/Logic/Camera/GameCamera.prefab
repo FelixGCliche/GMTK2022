@@ -219,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3383255591307025500}
   m_LocalRotation: {x: 0.34979865, y: -0, z: -0, w: 0.9368249}
-  m_LocalPosition: {x: 0, y: 7.58, z: -8.989}
+  m_LocalPosition: {x: 0, y: 7.5, z: -6.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -291,7 +291,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusPoint: {fileID: 0}
-  focusPointZOffset: 0
+  minDistance: 5
+  maxDistance: 15
+  zoomRate: 7
 --- !u!1 &7423489696948658783
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ba7db4d91981a4bba9a96cb163ed97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 50
 --- !u!114 &166794760488507685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +454,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1f66d45f-90df-45be-836d-1c2c95273653
     m_ActionName: Pause/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1026303876855615982}
+        m_TargetAssemblyTypeName: GameCamera, Assembly-CSharp
+        m_MethodName: ZoomIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 34d9b500-aebd-4944-b01f-b451030bb7d5
+    m_ActionName: Player/ZoomIn[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1026303876855615982}
+        m_TargetAssemblyTypeName: GameCamera, Assembly-CSharp
+        m_MethodName: ZoomOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bec97f5a-ca22-4e04-916b-5c63b9a22e5d
+    m_ActionName: Player/ZoomOut[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
