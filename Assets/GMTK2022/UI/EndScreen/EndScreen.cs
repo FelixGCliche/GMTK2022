@@ -3,12 +3,8 @@ using UnityEngine;
 
 public class EndScreen : MonoBehaviour
 {
+    [SerializeField]
     private Canvas endScreenCanvas;
-
-    private void Awake()
-    {
-        endScreenCanvas = GetComponent<Canvas>();
-    }
 
     private void OnEnable()
     {

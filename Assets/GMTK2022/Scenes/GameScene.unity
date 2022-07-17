@@ -598,7 +598,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4349557958637274229, guid: fc0604a39b6846e4a92560d41585032d, type: 3}
       propertyPath: m_Name
-      value: LosingScreen
+      value: EndScreen
       objectReference: {fileID: 0}
     - target: {fileID: 8000709891316846902, guid: fc0604a39b6846e4a92560d41585032d, type: 3}
       propertyPath: m_RootOrder
