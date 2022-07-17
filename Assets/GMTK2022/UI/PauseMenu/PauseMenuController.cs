@@ -20,6 +20,7 @@ public class PauseMenuController : MonoBehaviour
         settingsMenuPage.SetActive(false);
         Time.timeScale = 0f;
         Time.fixedDeltaTime = 0f;
+        DiceGameManager.Instance.SetGamePause(true);
     }
 
     public void ClosePauseMenu()
@@ -28,6 +29,7 @@ public class PauseMenuController : MonoBehaviour
         settingsMenuPage.SetActive(false);
         Time.timeScale = 1f;
         Time.fixedDeltaTime = baseFixedDeltaTime;
+        DiceGameManager.Instance.SetGamePause(false);
     }
 
     public void TogglePauseMenu()
