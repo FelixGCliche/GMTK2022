@@ -76,10 +76,6 @@ public class SoundManager : SingletonPersistant<SoundManager>
     public void SetMusicVolume(float value)
     {
         musicSource.volume = value;
-        foreach (AudioSource source in sfxSources)
-        {
-            source.volume = value;
-        }
     }
 
     public void SetSoundVolume(float value)
