@@ -13,6 +13,9 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void NextTurnDelegate();
     public event NextTurnDelegate NextTurn;
 
+    public delegate void AdjustHeightDelegate();
+    public event AdjustHeightDelegate AdjustHeight;
+
     public delegate void EndGameDelegate();
     public event EndGameDelegate EndGame;
 
@@ -56,6 +59,15 @@ public class DiceGameManager : Singleton<DiceGameManager>
         {
             if(NextTurn != null)
                 NextTurn();
+        }
+    }
+
+    public void AdjustCameraHeight()
+    {
+        if(gameIsActive)
+        {
+            if(AdjustHeight != null)
+                AdjustHeight();
         }
     }
 

@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class FallDetectionZone : MonoBehaviour
 {
+    [SerializeField] private bool IsFreemode = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Dice"))
         {
-            DiceGameManager.Instance.LostGame();
+            if (!IsFreemode)
+                DiceGameManager.Instance.LostGame();
+            else
+                DiceGameManager.Instance.AdjustCameraHeight();
         }
     }
 }

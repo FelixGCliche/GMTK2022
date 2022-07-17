@@ -22,6 +22,7 @@ public class DroppingZone : MonoBehaviour
     {
         DiceGameManager.Instance.EndTurn += AdjustScoreWithHeight;
         DiceGameManager.Instance.NextTurn += AdjustHeight;
+        DiceGameManager.Instance.AdjustHeight += AdjustHeight;
         DiceGameManager.Instance.RestartGame += ResetHeight;
     }
 
@@ -29,6 +30,7 @@ public class DroppingZone : MonoBehaviour
     {
         DiceGameManager.Instance.EndTurn -= AdjustScoreWithHeight;
         DiceGameManager.Instance.NextTurn -= AdjustHeight;
+        DiceGameManager.Instance.AdjustHeight -= AdjustHeight;
         DiceGameManager.Instance.RestartGame -= ResetHeight;
     }
 
