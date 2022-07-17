@@ -134,7 +134,7 @@ MonoBehaviour:
   m_text: Lorem Ipsum - Dolor sit amet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_sharedMaterial: {fileID: 1969465891917245268, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -268,8 +268,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ff138de1cdaa41c499feb2f6e2741b54, type: 2}
+  m_sharedMaterial: {fileID: 5112512035338258158, guid: ff138de1cdaa41c499feb2f6e2741b54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

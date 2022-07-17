@@ -70,7 +70,7 @@ MonoBehaviour:
   m_text: Skybox - AvionX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_sharedMaterial: {fileID: 1969465891917245268, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_text: UI Blur - Krivodeling
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
-  m_sharedMaterial: {fileID: -6204192877802633740, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+  m_sharedMaterial: {fileID: 1969465891917245268, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -435,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112084692834421613, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}
       propertyPath: m_text
-      value: DOTween - Demigiant
+      value: DOTween - Demingrant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f3052fe81ba014181ca04cbc45dcd7, type: 3}
