@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class SoundManager : SingletonPersistant<SoundManager>
 {
@@ -39,9 +40,17 @@ public class SoundManager : SingletonPersistant<SoundManager>
     {
         if(musicSource.clip != music)
         {
-            musicSource.clip = music;
-            musicSource.Play();
+            StartCoroutine(FadeInMusic(music, musicSource.volume));
         }
+    }
+
+    private IEnumerator FadeInMusic(AudioClip music, float targetVolume)
+    {
+        musicSource.DOFade(0f, 1f);
+        yield return new WaitForSeconds(1.1f);
+        musicSource.clip = music;
+        musicSource.Play();
+        musicSource.DOFade(targetVolume, 0.5f);
     }
 
     public void PlaySfx(AudioClip sfx, Vector3 sfxPosition, bool randomizePitch = false)
