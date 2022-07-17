@@ -32,6 +32,14 @@ PrefabInstance:
       value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 5690177851574273782, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+    - target: {fileID: 5690177851574273782, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4151704879371199465, guid: 246cb996789478741a9cf1bf5193a4e2, type: 2}
+    - target: {fileID: 5690177851574273782, guid: c2d78b6c0d191d540a85ab4d840e8d35, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 4
       objectReference: {fileID: 0}
