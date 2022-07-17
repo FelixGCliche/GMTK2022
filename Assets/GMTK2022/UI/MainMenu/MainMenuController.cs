@@ -13,6 +13,11 @@ public class MainMenuController : MonoBehaviour
         LoadingManager.Instance.ChangeScene("GameScene");
     }
 
+    public void StartFreemode()
+    {
+        LoadingManager.Instance.ChangeScene("FreemodeScene");
+    }
+
     public void GoBackToMainMenu()
     {
         settingsMenuPage.SetActive(false);

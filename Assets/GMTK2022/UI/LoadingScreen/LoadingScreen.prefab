@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1646771005507998942}
   - component: {fileID: 3593407447938209460}
+  - component: {fileID: 7054758211832715874}
   m_Layer: 0
   m_Name: LoadingScreen
   m_TagString: Untagged
@@ -47,6 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 2705179926074853060}
   LoadingScreen: {fileID: 4896753612546346950}
+--- !u!81 &7054758211832715874
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891277296781415677}
+  m_Enabled: 1
 --- !u!1 &3967388768748557104
 GameObject:
   m_ObjectHideFlags: 0
