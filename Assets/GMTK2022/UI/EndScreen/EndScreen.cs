@@ -9,12 +9,6 @@ public class EndScreen : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private int finalScore;
-    private TextMeshProUGUI finalScoreText;
-
-    private void Awake()
-    {
-        finalScoreText = endScreenCanvas.GetComponentInChildren<TextMeshProUGUI>();
-    }
 
     private void OnEnable()
     {
@@ -30,7 +24,6 @@ public class EndScreen : MonoBehaviour
     {
         scoreText.SetText(DiceGameManager.Instance.GetScore().ToString());
         endScreenCanvas.gameObject.SetActive(true);
-        finalScoreText.SetText("Score : " + finalScore); 
     }
 
     public void Replay()
