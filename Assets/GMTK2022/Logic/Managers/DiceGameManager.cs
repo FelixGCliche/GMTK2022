@@ -110,6 +110,11 @@ public class DiceGameManager : Singleton<DiceGameManager>
         }
     }
 
+    public int GetScore()
+    {
+        return score;
+    }
+
     public void SetGamePause(bool isPaused)
     {
         if(PauseGame != null)

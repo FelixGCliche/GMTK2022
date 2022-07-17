@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class EndScreen : MonoBehaviour
 {
-    [SerializeField]
-    private Canvas endScreenCanvas;
+    [SerializeField] private Canvas endScreenCanvas;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     private void OnEnable()
     {
@@ -18,6 +19,7 @@ public class EndScreen : MonoBehaviour
 
     public void ShowEndScreen()
     {
+        scoreText.SetText(DiceGameManager.Instance.GetScore().ToString());
         endScreenCanvas.gameObject.SetActive(true);
     }
 
