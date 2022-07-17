@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GMTK2022/Scenes/GameScene.unity
     guid: c4bbc6cc70399f24ea9b67e4a7f627ba
+  - enabled: 1
+    path: Assets/GMTK2022/Scenes/FreemodeScene.unity
+    guid: f2e8feb4012fe13469a1f672c25a5f3b
   m_configObjects: {}

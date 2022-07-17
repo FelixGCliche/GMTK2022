@@ -787,6 +787,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToCreditsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3643547486408592364, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643547486408592364, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643547486408592364, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643547486408592364, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4182528972042095988, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -954,6 +970,22 @@ PrefabInstance:
     - target: {fileID: 7477544117240844613, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297800445282692765, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6512776642144390773}
+    - target: {fileID: 8297800445282692765, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartFreemode
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297800445282692765, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297800445282692765, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8454611547421214141, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

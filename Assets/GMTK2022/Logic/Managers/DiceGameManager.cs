@@ -16,7 +16,7 @@ public class DiceGameManager : Singleton<DiceGameManager>
     public delegate void EndGameDelegate();
     public event EndGameDelegate EndGame;
 
-    public delegate void GameLostDelegate();
+    public delegate void GameLostDelegate(int finalScore);
     public event GameLostDelegate GameLost;
 
     public delegate void RestartGameDelegate();
@@ -67,7 +67,7 @@ public class DiceGameManager : Singleton<DiceGameManager>
         if(gameIsActive)
         {
             if(GameLost != null)
-                GameLost();
+                GameLost(score);
             GameEnded();
         }
     }

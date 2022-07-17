@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using TMPro;
 
@@ -6,6 +7,14 @@ public class EndScreen : MonoBehaviour
 {
     [SerializeField] private Canvas endScreenCanvas;
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    private int finalScore;
+    private TextMeshProUGUI finalScoreText;
+
+    private void Awake()
+    {
+        finalScoreText = endScreenCanvas.GetComponentInChildren<TextMeshProUGUI>();
+    }
 
     private void OnEnable()
     {
@@ -17,10 +26,11 @@ public class EndScreen : MonoBehaviour
         DiceGameManager.Instance.GameLost -= ShowEndScreen;
     }
 
-    public void ShowEndScreen()
+    public void ShowEndScreen(int finalScore)
     {
         scoreText.SetText(DiceGameManager.Instance.GetScore().ToString());
         endScreenCanvas.gameObject.SetActive(true);
+        finalScoreText.SetText("Score : " + finalScore); 
     }
 
     public void Replay()
