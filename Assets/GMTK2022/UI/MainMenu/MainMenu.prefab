@@ -278,6 +278,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToSettingsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1856396700367185488, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_Name
+      value: VideoCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 3440705247050814159, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -285,6 +289,18 @@ PrefabInstance:
     - target: {fileID: 3440705247050814159, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToCreditsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212541429224940607, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AspectRatio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212541429224940607, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 1799fff4a720ec44785af394e7f7a6ca, type: 2}
+    - target: {fileID: 4212541429224940607, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4694568650943896808, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -317,6 +333,34 @@ PrefabInstance:
     - target: {fileID: 5027770437324237459, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_Name
       value: MainMenuPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591785513970122077, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846261345809213559, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
+      propertyPath: m_Name
+      value: VideoPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 7126255394487694807, guid: 766827e079985f94b8fcd5b6b465d8c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
