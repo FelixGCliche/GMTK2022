@@ -214,7 +214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 624509001546212706, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
       propertyPath: m_Name
-      value: ScoreHUD
+      value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 1074150684011637899, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
       propertyPath: m_RootOrder
@@ -259,6 +259,18 @@ PrefabInstance:
     - target: {fileID: 1074150684011637899, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183817461886713903, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 383889100}
+    - target: {fileID: 2183817461886713903, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowPauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183817461886713903, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf494ffd7adc77478f26aec2b7d3ea3, type: 3}
@@ -377,6 +389,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00ca779ee76cab34f8c6dc532cf99719, type: 3}
+--- !u!114 &383889100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1235812926645705265, guid: d67503eac1df57c419c854d2b7615ea1, type: 3}
+  m_PrefabInstance: {fileID: 556093423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953bd5f31d28afb4db3d6f7902c25ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &556093423
 PrefabInstance:
   m_ObjectHideFlags: 0
