@@ -5,15 +5,17 @@ using UnityEngine.InputSystem;
 
 public class CameraBoom : MonoBehaviour
 {
+    [SerializeField] private float rotationSpeed;
+
     private bool rotatingRight = false;
     private bool rotatingLeft = false;
 
     private void Update()
     {
         if (rotatingRight)
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, -1, 0));
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, -rotationSpeed * Time.deltaTime, 0));
         if (rotatingLeft)
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 1, 0));
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, rotationSpeed * Time.deltaTime, 0));
     }
 
     public void RotateRight(InputAction.CallbackContext ctx)
