@@ -877,6 +877,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6040567562558101151, guid: c1c5105382ae39f44af9437d5ed2b8a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040567562558101151, guid: c1c5105382ae39f44af9437d5ed2b8a9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040567562558101151, guid: c1c5105382ae39f44af9437d5ed2b8a9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6062731099279561400, guid: c1c5105382ae39f44af9437d5ed2b8a9, type: 3}
       propertyPath: m_Name
       value: UnityPackageSection
@@ -1027,6 +1039,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4764905359479667887, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764905359479667887, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764905359479667887, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6977401586185883833, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1056,6 +1080,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7017344200969866845, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207046036737293861, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207046036737293861, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207046036737293861, guid: 2e121c2822604f44f9cd06d34cb0cfd3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
