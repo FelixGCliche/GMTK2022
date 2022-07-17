@@ -485,11 +485,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 787837493751148896, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 787837493751148896, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 254
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 1181383905695745908, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_Name
@@ -581,7 +581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1640883171022284303, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 3255312737431597761, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -601,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4231145196917034628, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_text
-      value: Freemode
+      value: Freemode (Beta)
       objectReference: {fileID: 0}
     - target: {fileID: 4794484910305839564, guid: 49b8f15ee351c824482fe77515c012e8, type: 3}
       propertyPath: m_Sprite
