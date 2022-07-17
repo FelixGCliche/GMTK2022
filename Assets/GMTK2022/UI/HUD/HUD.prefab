@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074150684011637899}
   - component: {fileID: 5707786392560819724}
+  - component: {fileID: 6623294318602321469}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2288302083399090470}
+--- !u!114 &6623294318602321469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624509001546212706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dffea90ecbff1429555cd09c4063a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3817217795515368741
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +307,7 @@ MonoBehaviour:
   m_text: 'Score : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ff138de1cdaa41c499feb2f6e2741b54, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: cac65b2eac08e854cb306724876e8b2e, type: 2}
+  m_sharedMaterial: {fileID: 5112512035338258158, guid: ff138de1cdaa41c499feb2f6e2741b54, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
