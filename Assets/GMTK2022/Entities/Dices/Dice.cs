@@ -33,7 +33,7 @@ public class Dice : MonoBehaviour, IDrag
     {
         diceRigidBody = GetComponent<Rigidbody>();
         dropDownLaserLineRenderer = GetComponentInChildren<LineRenderer>();
-        dropDownImpactInstance = Instantiate(dropDownImpact);
+        dropDownImpactInstance = Instantiate(dropDownImpact, new Vector3(0,-100,0), new Quaternion());
         quickOutline = GetComponent<QuickOutline>();
     }
 
